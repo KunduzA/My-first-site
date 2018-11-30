@@ -1,0 +1,40 @@
+{% load i18n my_filters %}
+<div class="cap">
+    <a href="/" class="rk">R&K</a>
+    <div class="menu" id="gmenu">
+        <ul>
+            <li>
+                <a  href="{% url 'woman' %}">
+                    {% trans 'женщины' %}
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'man' %}">
+                    {% trans 'мужчины' %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% trans 'дети' %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% trans 'r&k home' %}
+                </a>
+            </li>
+            <li>
+                 <a href="#">
+                     {% trans 'распродажа' %}
+                 </a>
+            </li>
+            <li>
+                <a href="{% url 'calculator' %}">
+                    {% trans 'калькулятор' %}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<hr noshade size="2">
+

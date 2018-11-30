@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load my_filters i18n %}
+{% load staticfiles %}
+
+{% block content %}
+    {% show_navbar 'man' %}
+
+    <div class="main-part">
+             <div class="left-list">
+                 <ul>
+                     <p>НОВЫЕ ПОСТУПЛЕНИЯ<p>
+                     <li><a href="#"></a>Одежда</li>
+                     <li><a href="#"></a>Обувь и аксесуары</li>
+                     <li><a href="#"></a>Белье и мужская пижама</li>
+                 </ul>
+                <br>
+                 <ul>
+                     <p>АКЦИИ<p>
+                     <li><a href="#"></a>Осенние предложения сейчаспо цене 849сомов</li>
+                 </ul>
+                <br>
+                 <ul>
+                     <p>ОСЕННИЙ СТИЛЬ<p>
+                     <li><a href="#"></a>Модные рубашки от 799сомов</li>
+                     <li><a href="#"></a>Осенний трикотаж</li>
+                     <li><a href="#"></a>Осенние брюки</li>
+                     <li><a href="#"></a>Актуальные модели курток и пальто</li>
+                     <li><a href="#"></a>Модная обувь от 1999сомов</li>
+                 </ul>
+                 <br>
+
+                 <ul>
+                     <p>ВЫБРАТЬ КАТЕГОРИЮ<p>
+                     <li><a href="#"></a>Просмотреть все</li>
+                     <li><a href="#"></a>Мужские футболки и майки</li>
+                     <li><a href="#"></a>Актуальные тренды</li>
+                     <li><a href="#"></a>Кардиганы и джемперы</li>
+                     <li><a href="#"></a>Толстовки и Худи</li>
+                     <li><a href="#"></a>Рубашки</li>
+                     <li><a href="#"></a>Куртки и пальто</li>
+                     <li><a href="#"></a>Брюки</li>
+                     <li><a href="#"></a>Джинсы</li>
+                     <li><a href="#"></a>Обувь</li>
+                     <li><a href="#"></a>Аксессуары</li>
+                     <li><a href="#"></a>Белье </li>
+                     <li><a href="#"></a>Одежда для сна</li>
+                     <li><a href="#"></a>Носки и колготки</li>
+                     <li><a href="#"></a>Шорты</li>
+                     <li><a href="#"></a>Пиджаки и костюмы</li>
+                     <li><a href="#"></a>Базовые модели</li>
+                     <li><a href="#"></a>Носки</li>
+                     <li><a href="#"></a>Спортивная одежда</li>
+                     <li><a href="#"></a>Одежда для плавания</li>
+                 </ul>
+                <br>
+                 <ul>
+                     <p>НАШИ ТРЕНДЫ<p>
+                     <li><a href="#"></a>Модели из денима</li>
+                     <li><a href="#"></a>Описание моделей</li>
+                     <li><a href="#"></a>Межсезонные куртки</li>
+                     <li><a href="#"></a>В оттенках синего</li>
+                     <li><a href="#"></a>Оттенки серого</li>
+                     <li><a href="#"></a>Эфектный трикотаж</li>
+                 </ul>
+
+            </div>
+
+            <div class="hard-core">
+                <img src="{% static 'image/1325873447_11111.jpg' %}">
+                <br>
+                 <p id="qqq">Осенние новинки</p>
+                <br>
+                <figure class="sign">
+                    <a href="#"><img src="{% static 'image/hmgoepprod.jpg' %}"></a>
+                    <figcaption>[elb chbceyrfv</figcaption>
+                </figure>
+                <figure class="sign">
+                    <a href="#"><img src="{% static 'image/hmgoepprod%20(1).jpg' %}"></a>
+                    <figcaption>Платье из шифона<br> с оборками</figcaption>
+                </figure>
+                <figure class="sign">
+                    <a href="#"><img src="{% static 'image/hmgoepprod%20(5).jpg' %}"></a>
+                    <figcaption>Платье из шифона<br> с оборками</figcaption>
+                </figure>
+            </div>
+
+     </div>
+
+    {% show_top %}
+
+{% endblock %}

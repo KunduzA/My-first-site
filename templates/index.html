@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load my_filters i18n %}
+{% load staticfiles %}
+
+{% block content %}
+    {% show_navbar 'index' %}
+
+    <div class="main-part"><br>
+
+        <img width="950" heigth="640" src="{% static 'image/img1.jpg' %}"><br><br><br>
+
+        <div class="prev"><a class="link" href="#">&lsaquo;</a></div>
+
+        <div class="slider">
+            <img class="img mom" width="940" heigth="640" src="{% static 'image/slider1.jpg' %}">
+            <img class="img" width="940" heigth="640" src="{% static 'image/slider2.jpg' %}">
+            <img class="img" width="940" heigth="640" src="{% static 'image/slider3.jpg' %}">
+        </div>
+
+        <div class="next"><a class="link" href="#">&rsaquo;</a></div>
+
+        <h2 class="hh">Осенние тенденции</h2>
+
+        <div>
+            <figure class="sign">
+                <a href="#"><img width="220" heigth="390" src="{% static 'image/img2.jpg' %}"></a>
+                <figcaption>Платье из шифона<br> с оборками</figcaption>
+            </figure>
+            <figure class="sign">
+                <a href="#"><img width="220" heigth="390" src="{% static 'image/img3.jpg' %}"></a>
+                <figcaption>Джемпер с треугольным<br> вырезам</figcaption>
+            </figure>
+            <figure class="sign">
+                <a href="#"><img width="220" heigth="390" src="{% static 'image/img4.jpg' %}"></a>
+                <figcaption>Брюки</figcaption>
+            </figure>
+            <figure class="sign">
+                <a href="#"><img width="220" heigth="390" src="{% static 'image/img5.jpg' %}"></a>
+                <figcaption>Свитшот</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    {% show_top %}
+    {% write_us %}
+
+{% endblock %}

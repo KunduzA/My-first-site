@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load my_filters i18n %}
+{% load staticfiles %}
+
+{% block content %}
+    {% show_navbar 'woman' %}
+    <div class="main-part">
+            <div class="left-list">
+                <ul>
+                    <p>НОВЫЕ ПОСТУПЛЕНИЯ<p>
+                    <li><a href="#"></a>Одежда</li>
+                    <li><a href="#"></a>Обувь и аксесуары</li>
+                </ul>
+                <br>
+
+                <ul>
+                    <p>ВЫБРАТЬ КАТЕГОРИЮ<p>
+                    <li><a href="#"></a>Просмотреть все</li>
+                    <li><a href="#"></a>Куртки и пальто</li>
+                    <li><a href="#"></a>Кардиганы и джемперы</li>
+                    <li><a href="#"></a>Пиджаки и жилеты</li>
+                    <li><a href="#"></a>Свитшоты и Худи</li>
+                    <li><a href="#"></a>Рубашки и блузки</li>
+                    <li><a href="#"></a>Трикатаж</li>
+                    <li><a href="#"></a>Платья</li>
+                    <li><a href="#"></a>Брюки</li>
+                    <li><a href="#"></a>Джинсы</li>
+                    <li><a href="#"></a>Обувь</li>
+                    <li><a href="#"></a>Аксессуары</li>
+                    <li><a href="#"></a>Белье </li>
+                    <li><a href="#"></a>Одежда для сна</li>
+                    <li><a href="#"></a>Носки и колготки</li>
+                    <li><a href="#"></a>Шорты</li>
+                    <li><a href="#"></a>Топы</li>
+                    <li><a href="#"></a>Купальник</li>
+                    <li><a href="#"></a>Базовые модели</li>
+                    <li><a href="#"></a>Комбинезоны</li>
+                    <li><a href="#"></a>Спортивная одежда</li>
+                    <li><a href="#"></a>Большие размеры</li>
+                    <li><a href="#"></a>Одежда для беременных</li>
+                    <li><a href="#"></a>Дополниетльные размеры</li>
+                    <li><a href="#"></a>Beauty</li>
+                </ul>
+                <br>
+
+                <ul>
+                    <p>НАШИ ТРЕНДЫ<p>
+                    <li><a href="#"></a>Изысканное пальто</li>
+                    <li><a href="#"></a>Актуальный стиль</li>
+                    <li><a href="#"></a>Для разной тебя</li>
+                    <li><a href="#"></a>Стильные куртки</li>
+                    <li><a href="#"></a>Поздравляем, Микки</li>
+                    <li><a href="#"></a>Самый мягкий трикотаж</li>
+                    <li><a href="#"></a>Осенние тона</li>
+                    <li><a href="#"></a>На каждый день</li>
+                    <li><a href="#"></a>Трикатаж на 899</li>
+                </ul>
+                <br>
+
+            </div>
+
+            <div class="hard-core">
+                <img width="700" src="{% static 'image/img10.jpg' %}">
+            </div>
+
+    </div>
+
+    {% show_top %}
+
+{% endblock %}
