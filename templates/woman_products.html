@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load my_filters i18n %}
+{% load staticfiles %}
+
+{% block content %}
+    {% show_navbar 'index' %}
+
+    <h1>{{ woman_products_id }}</h1>
+
+    <div class="products-page">
+        <div class="module product-description">
+            <div class="product-detail-image">
+                <img width="580" height="780" src="{{ woman_products.image.url }}">
+                <img width="580" height="780" src="{{ woman_products.image.url }}">
+            </div>
+
+            <div class="sub-content">
+                <div class="inner">
+                    <div class="name-price">
+                        <h1 class="product-item-headline">{{ woman_products.name }}</h1>
+                        <div class="product-item-price">
+                            <span>{{ woman_products.price }} сом</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% show_top %}
+    {% show_footer %}
+{% endblock %}

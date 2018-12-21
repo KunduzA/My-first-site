@@ -1,0 +1,266 @@
+{% load i18n my_filters %}
+{% load staticfiles %}
+
+<style>
+    body {
+        position: relative;
+        min-height: 100%;
+    }
+    .footer-global {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: #dadada;
+    }
+    .layout {
+        max-width: 990px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+        letter-spacing: normal;
+    }
+    .footer-global .layout {
+        margin: 30px auto 0;
+        padding: 0;
+        text-align: center;
+        background: #1a1a1a;
+        max-width: none;
+    }
+    .footer-global .layout>.footer-content {
+        padding: 0;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-global .layout .modules {
+        position: relative;
+        z-index: 1;
+    }
+    .footer-category {
+        margin: 0;
+        display: block;
+        width: 240px;
+        float: left;
+    }
+    .footer-category .footer-heading {
+        cursor: pointer;
+    }
+    .footer-heading {
+        color: #fff;
+        margin: 0;
+        font-size: 12px;
+        text-align: left;
+        position: relative;
+    }
+    .footer-category .list .item {
+        line-height: 1.5;
+        text-align: left;
+        list-style: none;
+        background: #1a1a1a;
+        position: relative;
+    }
+      .footer-category .list .item:first-child{
+         padding-top: 15px;
+      }
+    .footer-category .list .item a {
+        padding: 0;
+        font-size: 12px;
+        font-weight: normal;
+        color: #c8c8c8;
+        display: block;
+        position: relative;
+        text-decoration: none;
+    }
+    .footer-category .list .item :hover {
+        color: white;
+        opacity: 1.5;
+    }
+    footer-menu .link {
+        text-decoration: none;
+    }
+    .footer-global .link {
+        color: inherit;
+    }
+    .link {
+        color: inherit;
+        font-size: 12px;
+        text-transform: none;
+        padding: 0;
+        text-align: left;
+        background-color: transparent;
+        border: 0;
+    }
+    .footer-global .layout>.footer-content {
+        padding: 0;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flexbox .footer-social {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+    .footer-social {
+        margin: 35px 0;
+        padding: 0;
+        text-align: center;
+    }
+    .footer-market-info, .footer-copyright {
+        max-width: 540px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer-copyright .text {
+        font-size: 12px;
+        padding: 15px;
+    }
+    .footer-global .text {
+        margin-bottom: 10px;
+        max-width: 600px;
+        margin: 10px auto;
+    }
+    .footer-social .item {
+        display: inline-block;
+    }
+    .footer-social .item img {
+        border-radius: 12.5px;
+    }
+    .img-icon {
+        width: 25px;
+        height: 25px;
+    }
+    .footer-social .item .img-icon{
+        text-align: center;
+        float: left;
+        padding-left: 25px;
+    }
+    .aaa {
+        padding-top: 45px;
+    }
+    #rrr {
+        font-size: 12px;
+        text-align: left;
+        color: #dadada;
+        line-height: 1.4;
+    }
+    .bottom-icons {
+        padding-top: 220px;
+
+    }
+</style>
+
+<footer class="footer-global responsive">
+    <div class="layout">
+        <div class="four modules footer-menu footer-content">
+            <nav class="footer-category">
+                <h4 class="footer-heading">
+	                <div class="aaa">КУПИТЬ</div>
+	            </h4>
+                    <ul class="list">
+                        <li class="item">
+                             <a  href="{% url 'woman' %}" class="clickMenu-w">
+                                {% trans 'женщины' %}
+                             </a>
+                        </li>
+                        <li class="item">
+                             <a href="{% url 'man' %}" class="clickMenu">
+                                 {% trans 'мужчины' %}
+                             </a>
+                        </li>
+                        <li class="item"><a class="link" href="#">Дети</a></li>
+                        <li class="item"><a class="link" href="#">H&amp;M Home</a></li>
+                        </ul>
+	        </nav>
+            <nav class="footer-category">
+                <h4 class="footer-heading">
+                    <div class="aaa">ИНФОРМАЦИЯ О КОМПАНИИ</div>
+	            </h4>
+	            <ul class="list">
+                    <li class="item"><a class="link" href="#" target="_blank">Карьера в H&amp;M</a></li>
+                    <li class="item"><a class="link" href="#" target="_blank">О группе компаний H&amp;M</a></li>
+                    <li class="item"><a class="link" href="#" target="_blank">Экологическая и социальная ответственность</a></li>
+                    <li class="item"><a class="link" href="#" target="_blank">Пресса</a></li>
+                    <li class="item"><a class="link" href="#" target="_blank">Для инвесторов</a></li>
+                    <li class="item"><a class="link" href="#" target="_blank">Корпоративная ответственность</a></li>
+                </ul>
+	        </nav>
+            <nav class="footer-category">
+                <h4 class="footer-heading">
+	                <div class="aaa">ПОМОЩЬ</div>
+	            </h4>
+                <ul class="list">
+                    <li class="item"><a class="link" href="#">Служба поддержки</a></li>
+                    <li class="item"><a class="link" href="#">Мой H&amp;M </a></li>
+                    <li class="item"><a class="link" href="#">Найти магазин</a></li>
+                    <li class="item"><a class="link" href="#">Юридическая информация и политика конфиденциальности</a></li>
+                    <li class="item"><a class="link" href="#">Контакты</a></li>
+                </ul>
+	        </nav>
+
+            <nav class="footer-category">
+                <h4 class="footer-heading">
+	                <div class="aaa">ПОДПИСАТЬСЯ НА НОВОСТНУЮРАССЫЛКУ</div>
+	            </h4>
+                <p id="rrr">Зарегистрируйтесь сейчас и<br> получите скидку 25% на один<br> товар в онлайн-заказе</p>
+            </nav>
+
+        </div>
+        <div class="bottom-icons">
+            <ul class="footer-social">
+                <li class="item">
+                    <a href="#" title="Facebook">
+                        <img class="img-icon" src="{% static 'image/facebook.png' %}">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" title="Twitter">
+                        <img class="img-icon" src="{% static 'image/twiter.png' %}">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" title="Instagram">
+                         <img class="img-icon" src="{% static 'image/instagram.png' %}">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" title="Youtube">
+                         <img class="img-icon" src="{% static 'image/youTube.png' %}">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" title="Googleplus">
+                        <img class="img-icon" src="{% static 'image/googleplus.png' %}">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" title="Pinterest">
+                        <img class="img-icon" src="{% static 'image/pinterest.png' %}">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" title="Vkontakte">
+                        <img class="img-icon" src="{% static 'image/vk.png' %}">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-copyright footer-content">
+            <p class="text">
+                Концепция H&amp;M — модная и качественная одежда по лучшей цене с заботой о природе и человеке.
+                Компания H&amp;M была основана в Швеции в 1947 году и стала одним из лидеров среди международных компаний в области моды.
+                На содержание данного сайта распространяется авторское право и он является собственностью компании H &amp; M Hennes &amp; Mauritz AB.
+            </p>
+        </div>
+
+        <a href="/" class="rk" style="color: aliceblue; padding-top: 30px;">R&K</a>
+
+        <div style="font-size: 9px; padding-bottom: 50px; padding-top: 20px;" >Кыргызыстан | Сом </div>
+    </div>
+</footer>
+

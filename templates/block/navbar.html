@@ -1,40 +1,272 @@
 {% load i18n my_filters %}
+{% load staticfiles %}
 <div class="cap">
-    <a href="/" class="rk">R&K</a>
-    <div class="menu" id="gmenu">
-        <ul>
-            <li>
-                <a  href="{% url 'woman' %}">
-                    {% trans 'женщины' %}
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'man' %}">
-                    {% trans 'мужчины' %}
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    {% trans 'дети' %}
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    {% trans 'r&k home' %}
-                </a>
-            </li>
-            <li>
-                 <a href="#">
-                     {% trans 'распродажа' %}
-                 </a>
-            </li>
-            <li>
-                <a href="{% url 'calculator' %}">
-                    {% trans 'калькулятор' %}
-                </a>
-            </li>
-        </ul>
+
+     <div class="top-strip">
+        <nav class="services-menu">
+            <div class="linklist">
+                <ul>
+                    <li>
+                        <a class="link" href="#">Служба поддержки покупателей</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#">Новостная рассылка</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="more-links">
+                <button type="button" class="icon-more hidden-text">&hellip;</button>
+                <ul class="more-dropmenu" style="display: none;">
+                    <li><a class="link" href="#">Найти магазин</a></li>
+                    <li><a class="link" href="#" target="_blank">Скачать Android</a></li>
+                    <li><a class="link" href="#" target="_blank">Скачать iOS</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="session-menu">
+            <ul>
+                <li>
+                    <div>
+                        <a href="#" class="#">Мой H&M</a>
+                        <a href="#" class="#">Зарегистрироваться / Войти</a>
+                    </div>
+                </li>
+                <li class="favorites">
+                    <a href="#" class="#">Избранное</a>
+                </li>
+                <li>
+                    <a href="#" class="#">Корзинка</a>
+                </li>
+            </ul>
+        </nav>
     </div>
+
+    <div>
+        <a href="/" class="rk">R&K</a>
+        <div class="menu" id="gmenu">
+            <ul>
+                <li>
+                    <a  href="{% url 'woman' %}" class="clickMenu-w">
+                        {% trans 'женщины' %}
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'man' %}" class="clickMenu">
+                        {% trans 'мужчины' %}
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        {% trans 'дети' %}
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        {% trans 'r&k home' %}
+                    </a>
+                </li>
+                <li>
+                     <a href="#">
+                         {% trans 'распродажа' %}
+                     </a>
+                </li>
+                <li>
+                    <a href="{% url 'calculator' %}">
+                        {% trans 'калькулятор' %}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="visibleMenu-woman">
+           <div class="menu-categories">
+                <div class="menu-category">
+                    <div class="heading">Новые поступления</div>
+                        <ul style="padding-left: 0px; text-align: left;">
+                            <li><a href="#">Одежда</a></li>
+                            <li><a href="#">Обувь и аксесуары</a></li>
+                        </ul>
+                        <br>
+                </div>
+            </div>
+           <div class="menu-categories">
+                <div class="menu-category">
+                    <div class="heading">ВЫБРАТЬ КАТЕГОРИЮ</div>
+                        <ul style="padding-left: 0px; text-align: left;">
+                            <li><a href="#">Просмотреть все</a></li>
+                            <li><a href="#">Куртки и пальто</a></li>
+                            <li><a href="#">Кардиганы и джемперы</a></li>
+                            <li><a href="#">Пиджаки и жилеты</a></li>
+                            <li><a href="#">Свитшоты и Худи</a></li>
+                            <li><a href="#">Рубашки и блузки</a></li>
+                            <li><a href="#">Трикатаж</a></li>
+                            <li><a href="#">Платья</a></li>
+                            <li><a href="#">Брюки</a></li>
+                            <li><a href="#">Джинсы</a></li>
+                            <li><a href="#">Обувь</a></li>
+                            <li><a href="#">Аксессуары</a></li>
+                            <li><a href="#">Белье</a></li>
+
+                        </ul>
+               </div>
+         </div>
+        <div class="menu-categories">
+            <div class="menu-category">
+                    <ul style="padding-left: 0px; text-align: left;"><br>
+                            <li><a href="#">Одежда для сна</a></li>
+                            <li><a href="#">Носки и колготки</a></li>
+                            <li><a href="#">Шорты</a></li>
+                            <li><a href="#">Топы</a></li>
+                            <li><a href="#">Купальник</a></li>
+                            <li><a href="#">Базовые модели</a></li>
+                            <li><a href="#">Комбинезоны</a></li>
+                            <li><a href="#">Спортивная одежда</a></li>
+                            <li><a href="#">Большие размеры</a></li>
+                            <li><a href="#">Одежда для беременных</a></li>
+                            <li><a href="#">Дополниетльные размеры</a></li><br>
+                            <li><a href="#">Beauty</a></li>
+                    </ul>
+
+            </div>
+        </div>
+         <div class="menu-categories">
+                <div class="menu-category">
+                    <div class="heading">НАШИ ТРЕНДЫ</div>
+                        <ul style="padding-left: 0px; text-align: left;">
+                            <li><a href="#">Изысканное пальто</a></li>
+                            <li><a href="#">Актуальный стиль</a></li>
+                            <li><a href="#">Для разной тебя</a></li>
+                            <li><a href="#">Стильные куртки</a></li>
+                            <li><a href="#">Поздравляем, Микки</a></li>
+                            <li><a href="#">Самый мягкий трикотаж</a></li>
+                            <li><a href="#">Осенние тона</a></li>
+                            <li><a href="#">На каждый день</a></li>
+                            <li><a href="#">Трикатаж на 899</a></li>
+                        </ul>
+                        <br>
+                </div>
+        </div>
+    </div>
+
+    <div class="visibleMenu">
+        <div class="menu-categories">
+            <div class="menu-category">
+                <div class="heading">Новые поступления</div>
+                    <ul style="padding-left: 0px; text-align: left;">
+                        <li>
+                            <a href="#"> Одеждa </a>
+                        </li>
+                        <li>
+                            <a href="#">Обувь и аксессуары</a>
+                        </li>
+                    </ul>
+                <div class="heading">Избранное</div>
+                    <ul style="padding-left: 0px; text-align: left;">
+                        <li>
+                            <a href="#"> Лидеры продаж </a>
+                        </li>
+                        <li>
+                            <a href="#">Гид по подаркам</a>
+                      </li>
+                 </ul>
+            </div>
+        </div>
+        <div class="menu-categories">
+            <div class="menu-category">
+                <div class="heading">Выбрать категорию</div>
+                    <ul style="padding-left: 0px; text-align: left;">
+                        <li>
+                            <a href="#"> Просмотреть все</a>
+                        </li>
+                        <li>
+                            <a href="#"> Куртки и пальто</a>
+                        </li>
+                        <li>
+                            <a href="#">  Кардиганы и джемперы</a>
+                        </li>
+                        <li>
+                            <a href="#">  Худи и толстовки</a>
+                       </li>
+                        <li>
+                            <a href="#">  Рубашки</a>
+                        </li>
+                        <li>
+                            <a href="#">  Мужские футболки и майки</a><br>
+                        </li>
+                        <li>
+                            <a href="#">  Базовые модели</a>
+                        </li>
+                        <li>
+                            <a href="#">Брюки</a>
+                        </li>
+                        <li>
+                            <a href="#">Джинсы</a>
+                        </li>
+                        <li>
+                            <a href="#"> Пиджаки и костюмы</a>
+                        </li>
+                        <li>
+                            <a href="#">Юбувь</a>
+                        </li>
+                        <li>
+                            <a href="#"> Аксессуары</a>
+                        </li>
+                         <li>
+                             <a href="#">Белье </a>
+                         </li>
+                        <li>
+                            <a href="#">Носки</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    <div class="menu-categories">
+        <div class="menu-category">
+                <ul style="padding-left: 0px; text-align: left;"><br>
+                    <li><a href="#">Спортивная одежда </a></li>
+                    <li><a href="#">Шорты</a></li>
+                    <li><a href="#">Одежда для плавания </a></li>
+                    <li><a href="#">Широкий размерный ряд</a></li>
+                    <li><a href="#">Белье </a></li>
+                    <li><a href="#">Носки</a></li>
+                </ul>
+            <div class="heading">Наши тренды</div>
+                <ul style="padding-left: 0px; text-align: left;">
+                    <li><a href="#"> MOSCHINO [tv] H&amp;M </a></li>
+                    <li><a href="#">Трикотажные модели</a></li>
+                    <li><a href="#"> Стильные сочетания</a></li>
+                    <li><a href="#">Стильные модели</a></li>
+                    <li><a href="#">Праздничные свитера от 799 Руб </a></li><br>
+                    <li><a href="#">Праздничные образы от 799 Руб</a></li><br>
+                    <li><a href="#">К празднику готовы! </a></li>
+                    <li><a href="#">Праздник начинается</a></li>
+                </ul>
+            </div>
+    </div>
+        <div class="menu-categories">
+            <div class="menu-category">
+                <div class="heading">Выбрать коллекцию</div>
+                    <ul style="padding-left: 0px; text-align: left;">
+                        <li><a href="#">Premium Quality</a></li>
+                        <li><a href="#">H&amp;M Men</a></li>
+                        <li><a href="#">Modern Classic</a></li>
+                        <li><a href="#">Trend</a></li>
+                        <li><a href="#">L.O.G.G.</a></li>
+                        <li><a href="#">Divided</a></li>
+                        <li><a href="#">Базовые модели</a></li>
+                        <li><a href="#">Conscious – Экологичный стиль</a></li>
+                     </ul>
+                <div class="heading">#HMxME</div>
+                        <ul style="padding-left: 0px; text-align: left;">
+                            <li><a href="#"> #HMxME</a></li>
+                       </ul>
+             </div>
+         </div>
+    </div>
+
 </div>
 <hr noshade size="2">
 

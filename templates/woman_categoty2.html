@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load my_filters i18n %}
+{% block content %}
+    {% show_navbar 'index' %}
+    <div style="position: absolute;">
+    <div class="sidebar-plus-content">
+        <div class="page-sidebar">
+            <div class="secondary-nav">
+                <ul>
+                    <p class="list-group-title">НОВЫЕ ПОСТУПЛЕНИЯ<p>
+                    <li><a href="#">Одежда</a></li>
+                    <li><a href="#">Обувь и аксесуары</a></li>
+                </ul>
+                <br>
+
+                <ul>
+                    <p class="list-group-title">ВЫБРАТЬ КАТЕГОРИЮ<p>
+                    <li><a href="#">Просмотреть все</a></li>
+                    <li>
+                        {% for woman in woman_all %}
+                            <li>
+                                <a href="{% url 'woman_category' woman.id %}">{{ woman.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </li>
+                    <li><a href="#">Кардиганы и джемперы</a></li>
+                    <li><a href="#">Пиджаки и жилеты</a></li>
+                    <li><a href="#">Свитшоты и Худи</a></li>
+                    <li><a href="#">Рубашки и блузки</a></li>
+                    <li><a href="#">Трикатаж</a></li>
+                    <li><a href="#">Платья</a></li>
+                    <li><a href="#">Брюки</a></li>
+                    <li><a href="#">Джинсы</a></li>
+                    <li><a href="#">Обувь</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                    <li><a href="#">Белье </a></li>
+                    <li><a href="#">Одежда для сна</a></li>
+                    <li><a href="#">Носки и колготки</a></li>
+                    <li><a href="#">Шорты</a></li>
+                    <li><a href="#">Топы</a></li>
+                    <li><a href="#">Купальник</a></li>
+                    <li><a href="#">Базовые модели</a></li>
+                    <li><a href="#">Комбинезоны</a></li>
+                    <li><a href="#">Спортивная одежда</a></li>
+                    <li><a href="#">Большие размеры</a></li>
+                    <li><a href="#">Oдежда для беременных</a></li>
+                    <li><a href="#">Дополниетльные размеры</a></li>
+                    <li><a href="#">Beauty</a></li>
+                </ul>
+                <br>
+
+                <ul>
+                    <p class="list-group-title">НАШИ ТРЕНДЫ<p>
+                    <li><a href="#">Изысканное пальто</a></li>
+                    <li><a href="#">Актуальный стиль</a></li>
+                    <li><a href="#">Для разной тебя</a></li>
+                    <li><a href="#">Стильные куртки</a></li>
+                    <li><a href="#">Поздравляем, Микки</a></li>
+                    <li><a href="#">Самый мягкий трикотаж</a></li>
+                    <li><a href="#">Осенние тона</a></li>
+                    <li><a href="#">На каждый день</a></li>
+                    <li><a href="#">Трикатаж на 899</a></li>
+                </ul>
+                <br>
+
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div>
+                <div class="section">
+                    <h1 class="heading2">{{ woman.name }}</h1>
+                </div>
+
+                <div class="deck-text section">
+                    <div class="read-more-wrapper">
+                        <p>
+                           {{ woman.text }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <ul class="products-listing small">
+                        {% for woman_category1 in woman_category %}
+                            <li class="product-item">
+                                <div class="image-container">
+                                    {% if woman_category1.image %}
+                                        <img width="230" height="350" src="{{ woman_category1.image.url }}">
+                                    {% endif %}
+                                </div>
+                                <div class="item-details">
+                                    <h3 class="item-heading">
+                                        <a class="link" href="{% url 'woman_products' woman_category1.id %}">{{ woman_category1.name }}</a>
+                                    </h3>
+                                    <div class="item-priice">
+                                        <span class="price regular">{{ woman_category1.price }} сом</span>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    {% show_top %}
+    {% show_footer %}
+{% endblock %}

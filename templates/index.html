@@ -7,17 +7,20 @@
 
     <div class="main-part"><br>
 
-        <img width="950" heigth="640" src="{% static 'image/img1.jpg' %}"><br><br><br>
+        <img  class="new2019" width="950" heigth="640" src="{% static 'image/new2019.jpg' %}"><br><br><br>
+            <div class="text-container" data-text-color="white">
+                <span class="vignette">ВОЛШЕБНЫЕ ПРАЗДНИКИ</span>
+                <span class="preamble-top">НОВОГОДНЕЕ ПРЕДЛОЖЕНИЕ <br></span>
+                <span class="heading">СКИДКИ ДО 50%<br></span>
+                <span class="preamble-bottom">НА ИЗБРАННЫЕ МОДЕЛИ</span>
+            </div>
 
-        <div class="prev"><a class="link" href="#">&lsaquo;</a></div>
-
-        <div class="slider">
-            <img class="img mom" width="940" heigth="640" src="{% static 'image/slider1.jpg' %}">
-            <img class="img" width="940" heigth="640" src="{% static 'image/slider2.jpg' %}">
-            <img class="img" width="940" heigth="640" src="{% static 'image/slider3.jpg' %}">
-        </div>
-
-        <div class="next"><a class="link" href="#">&rsaquo;</a></div>
+        <img width="950" heigth="640" src="{% static 'image/fdbdfdfa.jpg' %}">
+            <div class="text-container-b" data-text-color="white">
+                <span class="vignette">ВОЛШЕБНЫЕ ПРАЗДНИКИ</span>
+                <span class="preamble-top">НОВОГОДНИЕ ТРЕНДЫ<br></span>
+                <span class="heading">НОВИНКИ СЕЗОНА</span>
+            </div>
 
         <h2 class="hh">Осенние тенденции</h2>
 
@@ -39,9 +42,13 @@
                 <figcaption>Свитшот</figcaption>
             </figure>
         </div>
+
+        <div class="img-new-year">
+            <img width="950" heigth="640" src="{% static 'image/new1.jpg' %}">
+            <h2 class="new-year">С новым годом!</h2>
+        </div>
     </div>
 
     {% show_top %}
-    {% write_us %}
-
+    {% show_footer %}
 {% endblock %}

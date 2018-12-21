@@ -12,3 +12,7 @@ def show_top():
 @register.inclusion_tag('block/write_us.html')
 def write_us():
     return {}
+
+@register.inclusion_tag('block/footer.html')
+def show_footer():
+    return {}

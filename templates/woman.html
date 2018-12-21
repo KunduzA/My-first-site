@@ -5,66 +5,96 @@
 {% block content %}
     {% show_navbar 'woman' %}
     <div class="main-part">
-            <div class="left-list">
-                <ul>
-                    <p>НОВЫЕ ПОСТУПЛЕНИЯ<p>
-                    <li><a href="#"></a>Одежда</li>
-                    <li><a href="#"></a>Обувь и аксесуары</li>
-                </ul>
-                <br>
+        <div class="left-list">
+            <ul>
+                <p>НОВЫЕ ПОСТУПЛЕНИЯ<p>
+                <li><a href="#"></a>Одежда</li>
+                <li><a href="#"></a>Обувь и аксесуары</li>
+            </ul>
+            <br>
 
-                <ul>
-                    <p>ВЫБРАТЬ КАТЕГОРИЮ<p>
-                    <li><a href="#"></a>Просмотреть все</li>
-                    <li><a href="#"></a>Куртки и пальто</li>
-                    <li><a href="#"></a>Кардиганы и джемперы</li>
-                    <li><a href="#"></a>Пиджаки и жилеты</li>
-                    <li><a href="#"></a>Свитшоты и Худи</li>
-                    <li><a href="#"></a>Рубашки и блузки</li>
-                    <li><a href="#"></a>Трикатаж</li>
-                    <li><a href="#"></a>Платья</li>
-                    <li><a href="#"></a>Брюки</li>
-                    <li><a href="#"></a>Джинсы</li>
-                    <li><a href="#"></a>Обувь</li>
-                    <li><a href="#"></a>Аксессуары</li>
-                    <li><a href="#"></a>Белье </li>
-                    <li><a href="#"></a>Одежда для сна</li>
-                    <li><a href="#"></a>Носки и колготки</li>
-                    <li><a href="#"></a>Шорты</li>
-                    <li><a href="#"></a>Топы</li>
-                    <li><a href="#"></a>Купальник</li>
-                    <li><a href="#"></a>Базовые модели</li>
-                    <li><a href="#"></a>Комбинезоны</li>
-                    <li><a href="#"></a>Спортивная одежда</li>
-                    <li><a href="#"></a>Большие размеры</li>
-                    <li><a href="#"></a>Одежда для беременных</li>
-                    <li><a href="#"></a>Дополниетльные размеры</li>
-                    <li><a href="#"></a>Beauty</li>
-                </ul>
-                <br>
+            <ul>
+                <p>ВЫБРАТЬ КАТЕГОРИЮ<p>
+                <li><a href="#"></a>Просмотреть все</li>
+                <li>
+                    {% for woman1 in woman %}
+                        <li>
+                            <a href="{% url 'woman_category' woman1.id %}">{{ woman1.name }}</a>
+                        </li>
+                    {% endfor %}
+                </li>
+                <li><a href="#"></a>Кардиганы и джемперы</li>
+                <li><a href="#"></a>Пиджаки и жилеты</li>
+                <li><a href="#"></a>Свитшоты и Худи</li>
+                <li><a href="#"></a>Рубашки и блузки</li>
+                <li><a href="#"></a>Трикатаж</li>
+                <li><a href="#"></a>Платья</li>
+                <li><a href="#"></a>Брюки</li>
+                <li><a href="#"></a>Джинсы</li>
+                <li><a href="#"></a>Обувь</li>
+                <li><a href="#"></a>Аксессуары</li>
+                <li><a href="#"></a>Белье </li>
+                <li><a href="#"></a>Одежда для сна</li>
+                <li><a href="#"></a>Носки и колготки</li>
+                <li><a href="#"></a>Шорты</li>
+                <li><a href="#"></a>Топы</li>
+                <li><a href="#"></a>Купальник</li>
+                <li><a href="#"></a>Базовые модели</li>
+                <li><a href="#"></a>Комбинезоны</li>
+                <li><a href="#"></a>Спортивная одежда</li>
+                <li><a href="#"></a>Большие размеры</li>
+                <li><a href="#"></a>Одежда для беременных</li>
+                <li><a href="#"></a>Дополниетльные размеры</li>
+                <li><a href="#"></a>Beauty</li>
+            </ul>
+            <br>
 
-                <ul>
-                    <p>НАШИ ТРЕНДЫ<p>
-                    <li><a href="#"></a>Изысканное пальто</li>
-                    <li><a href="#"></a>Актуальный стиль</li>
-                    <li><a href="#"></a>Для разной тебя</li>
-                    <li><a href="#"></a>Стильные куртки</li>
-                    <li><a href="#"></a>Поздравляем, Микки</li>
-                    <li><a href="#"></a>Самый мягкий трикотаж</li>
-                    <li><a href="#"></a>Осенние тона</li>
-                    <li><a href="#"></a>На каждый день</li>
-                    <li><a href="#"></a>Трикатаж на 899</li>
-                </ul>
-                <br>
+            <ul>
+                <p>НАШИ ТРЕНДЫ<p>
+                <li><a href="#"></a>Изысканное пальто</li>
+                <li><a href="#"></a>Актуальный стиль</li>
+                <li><a href="#"></a>Для разной тебя</li>
+                <li><a href="#"></a>Стильные куртки</li>
+                <li><a href="#"></a>Поздравляем, Микки</li>
+                <li><a href="#"></a>Самый мягкий трикотаж</li>
+                <li><a href="#"></a>Осенние тона</li>
+                <li><a href="#"></a>На каждый день</li>
+                <li><a href="#"></a>Трикатаж на 899</li>
+            </ul>
+            <br>
 
+        </div>
+
+
+
+        <img width="700" src="{% static 'image/new2019.jpg' %}"><br><br><br>
+            <div class="text-container-woman" data-text-color="white">
+                <span class="vignette">ВОЛШЕБНЫЕ ПРАЗДНИКИ<br></span>
+                <span class="preamble-top">НОВОГОДНЕЕ ПРЕДЛОЖЕНИЕ <br></span>
+                <span class="heading">СКИДКИ ДО 50%<br></span>
+                <span class="preamble-bottom">НА ИЗБРАННЫЕ МОДЕЛИ</span>
             </div>
 
-            <div class="hard-core">
-                <img width="700" src="{% static 'image/img10.jpg' %}">
+        <span class="banner">
+            <h3 class="headline">Прочитать условия </h3>
+            <p class="text">
+                Акция действует на избранные модели на hm.com и в магазинах до
+                02/01/2019 или пока товар находится на складе. Цены и продукты в
+                магазинах могут отличаться от онлайн.<br><br>
+            </p>
+       </span>
+
+        <img width="700" src="{% static 'image/fdbdfdfa.jpg' %}">
+            <div class="text-container-woman-b" data-text-color="white">
+                <span class="vignette">ВОЛШЕБНЫЕ ПРАЗДНИКИ</span>
+                <span class="preamble-top">НОВОГОДНИЕ ТРЕНДЫ<br></span>
+                <span class="heading">НОВИНКИ СЕЗОНА</span>
             </div>
+
 
     </div>
 
     {% show_top %}
+    {% show_footer %}
 
 {% endblock %}
