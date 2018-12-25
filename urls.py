@@ -4,10 +4,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from hm.views import IndexView, WomanView, ManView, СalculatorView, Woman_categoryView, Woman_productsView
+from hm.views import IndexView, WomanView, ManView, СalculatorView, Woman_categoryView, Woman_productsView, SearchView
 
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name="index"),
+    url(r'^search/$', SearchView.as_view(), name="search"),
     url(r'^woman/$', WomanView.as_view(), name="woman"),
     url(r'^man/$', ManView.as_view(), name="man"),
     url(r'^calculator/$', СalculatorView.as_view(), name="calculator"),

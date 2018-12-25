@@ -5,27 +5,50 @@
 {% block content %}
     {% show_navbar 'index' %}
 
-    <h1>{{ woman_products_id }}</h1>
-
     <div class="products-page">
         <div class="module product-description">
+
+            {% for  woman_product in  woman_products %}
             <div class="product-detail-image">
-                <img width="580" height="780" src="{{ woman_products.image.url }}">
-                <img width="580" height="780" src="{{ woman_products.image.url }}">
+                <img width="580" height="840" src="{{ woman_product.image.url }}">
+                <img width="580" height="840" src="{{ woman_product.image2.url }}">
             </div>
 
             <div class="sub-content">
                 <div class="inner">
                     <div class="name-price">
-                        <h1 class="product-item-headline">{{ woman_products.name }}</h1>
+                        <h1 class="product-item-headline">{{ woman_product.name }}</h1>
                         <div class="product-item-price">
-                            <span>{{ woman_products.price }} сом</span>
+                            <span>{{ woman_product.price }} сом</span>
                         </div>
-
                     </div>
 
+                    <div class="button-size">
+                        <label for="edition">Выберите размер</label><br>
+                            <select class="select" name="edition" id="edition">
+                                <option value="32">32</option>
+                                <option value="34">34</option>
+                                <option value="36">36</option>
+                                <option value="38">38</option>
+                                <option value="49">40</option>
+                                <option value="42">42</option>
+                                <option value="44">44</option>
+                                <option value="46">46</option>
+                                <option value="48">48</option>
+                            </select>
+                    </div>
                 </div>
+
+
             </div>
+
+            <div class="description">
+                <span class="marker">{{ woman_product.mark }}</span>
+                <p class="description-text">{{ woman_product.text }}</p>
+                <p class="description-composition">{{ woman_product.composition }}</p>
+            </div>
+
+            {% endfor %}
         </div>
     </div>
 

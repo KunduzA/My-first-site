@@ -17,6 +17,7 @@ class Subcategories_woman(models.Model):
     mark = models.CharField(max_length=100, verbose_name=u"Качество", default=" ")
     color = models.CharField(max_length=100, verbose_name=u"Расцветки", default="")
     image = models.ImageField(null = True, blank = True, upload_to='images', verbose_name=u"Картинка")
+    image2 = models.ImageField(null=True, blank=True, upload_to='images', verbose_name=u"Картинка(2)")
     name_сategories = models.ForeignKey(Categories_woman, on_delete=models.CASCADE)
 
     def __str__(self):

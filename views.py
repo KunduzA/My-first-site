@@ -1,6 +1,7 @@
 # coding=utf-8
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from django.db.models import Q
 from hm.models import Subcategories_woman, Categories_woman
 
 class IndexView(TemplateView):
@@ -45,8 +46,21 @@ class Woman_productsView(TemplateView):
     def get_context_data(self, **kwargs):
         woman_products_id = kwargs['woman_products_id']
 
-        woman_products = Subcategories_woman.objects.filter(pk=woman_products_id)
+        woman_products = Subcategories_woman.objects.filter(id=woman_products_id)
         return {
-            'woman_products_id':  woman_products_id,
             'woman_products': woman_products,
         }
+
+
+
+class SearchView(TemplateView):
+    template_name = "search.html"
+
+    def get(self, request, *args, **kwargs):
+        query = request.GET.get("q")
+        founded_products = Subcategories_woman.objects.filter(Q(name=query))
+        context = {
+            'query': query,
+            'founded_products': founded_products
+        }
+        return render(request, self.template_name, context)

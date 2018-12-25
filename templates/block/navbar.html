@@ -78,6 +78,12 @@
                     </a>
                 </li>
             </ul>
+            <div id="search-field">
+                <form method="get" action="{% url 'search' %}">
+                    <input id="main-field" type="text" name="q" placeholder="Искать товары">
+                    <span class="magnify">&#128269;</span>
+                </form>
+            </div>
         </div>
     </div>
 

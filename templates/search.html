@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load my_filters i18n %}
+{% load staticfiles %}
+
+{% block content %}
+    {% show_navbar 'index' %}
+    <div class="center">
+
+        <h2>{{ title}}</h2>
+        <h2>Показаны результаты для "{{query}}"</h2>
+        <div class="section">
+            <ul class="products-listing small">
+                {% for product in founded_products %}
+                    <li class="product-item">
+                        <div class="image-container">
+                            {% if product.image %}
+                                <img width="230" height="350" src="{{product.image.url }}">
+                            {% endif %}
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-heading">
+                                <a class="link" href="{% url 'woman_products' product.id %}">{{ product.name }}</a>
+                            </h3>
+                            <div class="item-priice">
+                                <span class="price regular">{{ product.price }} сом</span>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+    {% show_top %}
+    {% show_footer %}
+{% endblock %}
